@@ -1,0 +1,187 @@
+// Variables
+$primary-color: #b80c09
+$secondary-color: #6b0806
+$text-color: #140101
+$background-color: #f8e5e5
+$hover-color: #ff9999
+$primary-font: "Roboto", sans-serif
+$secondary-font: "Raleway", sans-serif
+
+// Flexbox Mixins
+=flex-row-nowrap
+    display: flex
+    flex-flow: row nowrap
+
+=flex-column-nowrap
+    display: flex
+    flex-flow: column nowrap
+
+=flex-center
+    align-items: center
+    justify-content: center
+
+// Margin and Padding reset mixin
+=reset
+    margin: 0
+    padding: 0
+
+// Full width and height mixin
+=fullsize
+    height: 100%
+    width: 100%
+
+// Fade-in Keyframe
+@keyframes fadein
+    0%
+        opacity: 0
+
+    100%
+        opacity: 1
+
+// Base Styles
+html,
+body
+    +reset
+    +fullsize
+
+    color: $text-color
+    font-family: $primary-font
+
+a
+    color: $text-color
+    text-decoration: none
+
+h1,
+h2,
+p,
+ul
+    +reset
+
+h2
+    font-size: 1rem
+
+p,
+ul
+    font-family: $secondary-font
+    font-size: 1rem
+
+// Container for split page
+.container
+    +flex-row-nowrap
+    +fullsize
+
+    // Left half & Right half
+    .left,
+    .right
+        flex-basis: 50%
+
+    // Left Half
+    .left
+        background-color: $primary-color
+
+        .infobox
+            +flex-column-nowrap
+            +flex-center
+
+            animation: fadein 2s
+            min-height: 95%
+            width: 100%
+
+            img
+                width: 10rem
+                height: 10rem
+                border-radius: 50%
+                padding-bottom: 0.75rem
+
+            h1,
+            p
+                line-height: 2rem
+
+            a
+                background-color: $background-color
+                padding: 0.25rem 1rem
+                border-radius: 3px
+                transition: 1s
+
+                &:hover
+                    background-color: $hover-color
+
+        // Links to other online profiles
+        nav
+            +flex-row-nowrap
+
+            width: 100%
+            justify-content: flex-end
+            align-content: flex-end
+
+            a
+                font-size: 2rem
+                padding-right: 1rem
+                animation: fadein 4s
+
+    // Right half
+    .right
+        background-color: $background-color
+
+        .about,
+        .skill,
+        .experience,
+        .interest,
+        .technology
+            +flex-row-nowrap
+            +reset
+
+            width: 95%
+            justify-content: center
+            padding-left: 1rem
+            padding-bottom: 1rem
+            word-break: break-word
+            animation: fadein 2s
+
+            h2
+                text-align: end
+                flex-basis: 15%
+                color: $text-color
+
+            ul,
+            p
+                flex-basis: 85%
+
+            p
+                padding: 0 1rem
+
+            ul
+                padding-left: 2.25rem
+                list-style: circle
+
+        .about
+            margin-top: 3rem
+
+        .technology
+            ul
+                padding: 0 1rem
+
+                li
+                    font-weight: 750
+                    list-style: none
+                    display: inline-block
+                    border: 2px solid $primary-color
+                    padding: 0.25rem 0.5rem
+                    border-radius: 5px
+
+// Mobile breakpoint style
+@media only screen and (max-width: 768px)
+    .container
+        +reset
+        +flex-column-nowrap
+
+        .left,
+        .right
+            flex-basis: 50%
+
+        .left
+            .infobox
+                min-height: 85%
+
+                img
+                    padding-top: 1rem

@@ -1,0 +1,253 @@
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  color: #140101;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: #140101;
+  text-decoration: none;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+p,
+ul {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+.container .left,
+.container .right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.container .left {
+  background-color: #b80c09;
+}
+
+.container .left .infobox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+  min-height: 95%;
+  width: 100%;
+}
+
+.container .left .infobox img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  padding-bottom: 0.75rem;
+}
+
+.container .left .infobox h1,
+.container .left .infobox p {
+  line-height: 2rem;
+}
+
+.container .left .infobox a {
+  background-color: #f8e5e5;
+  padding: 0.25rem 1rem;
+  border-radius: 3px;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.container .left .infobox a:hover {
+  background-color: #ff9999;
+}
+
+.container .left nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+.container .left nav a {
+  font-size: 2rem;
+  padding-right: 1rem;
+  -webkit-animation: fadein 4s;
+          animation: fadein 4s;
+}
+
+.container .right {
+  background-color: #f8e5e5;
+}
+
+.container .right .about,
+.container .right .skill,
+.container .right .experience,
+.container .right .interest,
+.container .right .technology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
+  width: 95%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  word-break: break-word;
+  -webkit-animation: fadein 2s;
+          animation: fadein 2s;
+}
+
+.container .right .about h2,
+.container .right .skill h2,
+.container .right .experience h2,
+.container .right .interest h2,
+.container .right .technology h2 {
+  text-align: end;
+  -ms-flex-preferred-size: 15%;
+      flex-basis: 15%;
+  color: #140101;
+}
+
+.container .right .about ul,
+.container .right .about p,
+.container .right .skill ul,
+.container .right .skill p,
+.container .right .experience ul,
+.container .right .experience p,
+.container .right .interest ul,
+.container .right .interest p,
+.container .right .technology ul,
+.container .right .technology p {
+  -ms-flex-preferred-size: 85%;
+      flex-basis: 85%;
+}
+
+.container .right .about p,
+.container .right .skill p,
+.container .right .experience p,
+.container .right .interest p,
+.container .right .technology p {
+  padding: 0 1rem;
+}
+
+.container .right .about ul,
+.container .right .skill ul,
+.container .right .experience ul,
+.container .right .interest ul,
+.container .right .technology ul {
+  padding-left: 2.25rem;
+  list-style: circle;
+}
+
+.container .right .about {
+  margin-top: 3rem;
+}
+
+.container .right .technology ul {
+  padding: 0 1rem;
+}
+
+.container .right .technology ul li {
+  font-weight: 750;
+  list-style: none;
+  display: inline-block;
+  border: 2px solid #b80c09;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .container .left,
+  .container .right {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .container .left .infobox {
+    min-height: 85%;
+  }
+  .container .left .infobox img {
+    padding-top: 1rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
