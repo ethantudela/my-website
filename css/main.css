@@ -44,7 +44,9 @@ p {
   font-size: 1rem;
 }
 
-ul, p {
+ul,
+p,
+li {
   font-family: "Raleway", sans-serif;
 }
 
