@@ -2,10 +2,11 @@
 $primary-color: #ff383B
 $secondary-color: #6b0806
 $text-color: #140101
+$accent-color: #B50C0F
 $background-color: #f8f8f8
 $hover-color: #ff9999
 $primary-font: "Roboto", sans-serif
-$secondary-font: "Raleway", sans-serif
+$secondary-font: "Lato", sans-serif
 
 // Flexbox Mixins
 =flex-row-nowrap
@@ -30,13 +31,44 @@ $secondary-font: "Raleway", sans-serif
     height: 100%
     width: 100%
 
-// Fade-in Keyframe
-@keyframes fadein
-    0%
-        opacity: 0
+// Full width
+=fullwidth
+    width: 100%
 
-    100%
-        opacity: 1
+// Hover.css - Grow hover effect
+=hover-grow
+    display: inline-block
+    vertical-align: middle
+    transform: perspective(1px) translateZ(0)
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+    transition-duration: 0.3s
+    transition-property: transform
+    &:hover,
+    &:focus,
+    &:active,
+        transform: scale(1.2)
+
+// Hover.css - Back pulse effect
+=hover-back-pulse
+    display: inline-block
+    vertical-align: middle
+    transform: perspective(1px) translateZ(0)
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+    transition-duration: 0.5s
+    transition-property: background-color
+    &:hover,
+    &:focus,
+    &:active,
+        animation-name: back-pulse
+        animation-duration: 1s
+        animation-delay: 0.5s
+        animation-timing-function: linear
+        animation-iteration-count: infinite
+        background-color: $background-color
+        
+@keyframes back-pulse
+  50%
+    background-color: $hover-color
 
 // Base Styles
 html,
@@ -46,25 +78,29 @@ body
 
     color: $text-color
     font-family: $primary-font
+    overflow: hidden
+
+a,
+ul,
+p,
+li
+    font-family: $secondary-font
 
 a
     color: $text-color
     text-decoration: none
 
+// Margin and padding reset for h1, h2, p and ul
 h1,
 h2,
 p,
 ul
     +reset
 
-h2,
-p
-    font-size: 1rem
-
-ul,
-p,
-li
-    font-family: $secondary-font
+// Normalizing h2 font
+h2
+    font-size: 0.75rem
+    font-weight: 500
 
 // Container for split page
 .container
@@ -84,7 +120,7 @@ li
             +flex-column-nowrap
             +flex-center
 
-            animation: fadein 2s
+            //animation: fadein 2s
             min-height: 95%
             width: 100%
 
@@ -92,83 +128,66 @@ li
                 width: 10rem
                 height: 10rem
                 border-radius: 50%
-                padding-bottom: 0.75rem
+                padding-bottom: 1rem
 
             h1,
             p
                 line-height: 2rem
 
             a
-                background-color: $background-color
-                padding: 0.25rem 1rem
+                padding: 0.25rem 2rem
                 border-radius: 3px
-                transition: 1s
+                background-color: $background-color
+                +hover-back-pulse
 
-                &:hover
-                    background-color: $hover-color
-
-        // Links to other online profiles
+        // Links to online profiles
         nav
             +flex-row-nowrap
-
+            min-height: 5%
             width: 100%
             justify-content: flex-end
             align-content: flex-end
 
             a
+                +hover-grow
                 font-size: 2rem
                 padding-right: 1rem
-                animation: fadein 4s
 
     // Right half
     .right
         background-color: $background-color
 
-        .about,
-        .skill,
-        .experience,
-        .interest,
-        .technology
-            +flex-row-nowrap
-            +reset
-
-            width: 95%
-            justify-content: center
-            padding-left: 1rem
-            padding-bottom: 1rem
-            word-break: break-word
-            animation: fadein 2s
+        section
+            display: flex
+            padding: 0 4rem 1rem 4rem
 
             h2
+                color: $accent-color
+                flex-basis: 10%
                 text-align: end
-                flex-basis: 15%
-                color: $text-color
+                padding-top: .25rem
 
-            ul,
-            p
-                flex-basis: 85%
-
-            p
-                padding: 0 1rem
+            p,
+            ul
+                flex-basis: 90%
+                text-align: start
 
             ul
-                padding-left: 2.25rem
-                list-style: circle
+                list-style-type: circle
+                padding-left: 3rem
+
+            p
+                padding-left: 1.75rem
 
         .about
-            margin-top: 3rem
+            margin-top: 4rem
 
-        .technology
-            ul
-                padding: 0 1rem
+        .experience-list
+            +flex-column-nowrap
 
-                li
-                    list-style: none
-                    display: inline-block
-                    border: 2px solid $primary-color
-                    padding: 0.25rem 0.5rem
-                    border-radius: 5px
-                    margin-bottom: .25rem
+        .experience-item > p > span
+            font-weight: 700
+
 
 // Mobile breakpoint style
 @media only screen and (max-width: 768px)
@@ -179,10 +198,21 @@ li
         .left,
         .right
             flex-basis: 50%
+            min-height: 100%
 
         .left
             .infobox
-                min-height: 85%
-
+                min-height: 90%
                 img
                     padding-top: 1rem
+            nav
+                min-height: 10%
+        
+        .right
+            section
+                padding: .5rem 1rem
+                ul,
+                p
+                    flex-basis: 80%
+                h2
+                    flex-basis: 20%
