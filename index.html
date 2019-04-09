@@ -5,31 +5,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Ethan Tudela</title>
-    
+    <title>Ethan Tudela | Website designer & developer based in Gainesville, FL.</title>
+    <meta name="description"
+        content="Ethan Tudela is a freelance website designer and developer currently based in Gainesville, Florida.">
+    <meta name="robots" content="index, nofollow">
+    <meta name="author" content="Ethan Tudela">
+
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css\main.css">    
-    
+    <link rel="stylesheet" href="css\main.css">
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
     <!-- Website icon -->
     <link rel="shortcut icon" href="favicon.ico">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137053294-1"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
 
-    gtag('config', 'UA-137053294-1');
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137053294-1');
     </script>
 
+    <!-- Schema JSON LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org/",
+            "@type": "Person",
+            "name": "Ethan Tudela",
+            "jobTitle": "Website designer & developer",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Gainesville",
+                "addressRegion": "FL"
+            }
+        }
+    </script>
 </head>
+
 <body>
     <div class="container">
         <div class="left">
@@ -42,13 +65,15 @@
             <nav>
                 <a href="https://www.linkedin.com/in/ethantudela/"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/ethantudela"><i class="fab fa-github"></i></a>
-                <a href="https://stackoverflow.com/users/10292365/ethan-tudela"><i class="fab fa-stack-overflow"></i></a>
+                <a href="https://stackoverflow.com/users/10292365/ethan-tudela"><i
+                        class="fab fa-stack-overflow"></i></a>
             </nav>
         </div>
         <div class="right">
             <section class="about">
                 <h2>About Me</h2>
-                <p>I'm a freelance website designer and developer currently based in Gainesville, Florida. I specialize in front-end development with a working knowledge of back-end development.</p>
+                <p>I'm a freelance website designer and developer currently based in Gainesville, Florida. I specialize
+                    in front-end development with a working knowledge of back-end development.</p>
             </section>
             <section class="skill">
                 <h2>Skills</h2>
@@ -77,10 +102,14 @@
             <section class="experience">
                 <h2>Experience</h2>
                 <div class="experience-list">
-                    <div class="experience-item"><p><span>Nov. 2018 - Present</span> - Freelance website development</p></div>
+                    <div class="experience-item">
+                        <p><span>Nov. 2018 - Present</span>- Freelance website development</p>
+                    </div>
                 </div>
             </section>
         </div>
     </div>
+
 </body>
+
 </html>
