@@ -166,6 +166,15 @@ h2 {
 }
 
 .container .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 100%;
+  width: 100%;
   background-color: #f8f8f8;
 }
 
@@ -216,6 +225,22 @@ h2 {
 
 .container .right .experience-item > p > span {
   font-weight: 700;
+}
+
+.container .right .credits {
+  margin-top: auto;
+  padding: 0 .5rem .25rem 0;
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container .right .credits a:hover span {
+  color: #ff383B;
+  -webkit-transition: .25s;
+  transition: .25s;
 }
 
 @media only screen and (max-width: 768px) {
