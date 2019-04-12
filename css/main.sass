@@ -89,15 +89,23 @@ a
     color: $text-color
     text-decoration: none
 
-// Margin and padding reset for h1, h2, p and ul
+// Margin and padding reset for h1, h2, h3, p and ul
 h1,
 h2,
+h3,
 p,
 ul
     +reset
 
-// Normalizing h2 font
+// h1, h2, h3 font styling
+h1
+    font-size: 2rem
+    font-weight: 500
+
 h2
+    font-size: 1.25rem
+
+h3
     font-size: 0.75rem
     font-weight: 500
 
@@ -113,12 +121,13 @@ h2
 
     // Left Half
     .left
+        +flex-column-nowrap
         background-color: $primary-color
         overflow: hidden
+
         .infobox
             +flex-column-nowrap
             +flex-center
-
             //animation: fadein 2s
             min-height: 95%
             width: 100%
@@ -129,12 +138,13 @@ h2
                 border-radius: 50%
                 padding-bottom: 1rem
 
-            h1,
-            p
+            h1
                 line-height: 2rem
 
             a
-                padding: 0.25rem 2rem
+                font-weight: 700
+                margin-top: .5rem
+                padding: 0.5rem 3rem
                 border-radius: 3px
                 background-color: $background-color
                 +hover-back-pulse
@@ -161,7 +171,7 @@ h2
             display: flex
             padding: 0 4rem 1rem 4rem
 
-            h2
+            h3
                 color: $accent-color
                 flex-basis: 10%
                 text-align: end
@@ -173,11 +183,17 @@ h2
                 text-align: start
 
             ul
-                list-style-type: circle
-                padding-left: 3rem
+                list-style-type: none
+                padding-left: 1rem
+                li
+                    font-weight: 800
+                i
+                    padding-right: .5rem
+                    padding-bottom: .25rem
+                    color: $accent-color
 
             p
-                padding-left: 1.75rem
+                padding-left: .75rem
 
         .about
             margin-top: 4rem
@@ -188,16 +204,17 @@ h2
         .experience-item > p > span
             font-weight: 700
         
-        .credits
+        .misc
+            +flex-row-nowrap
+            justify-content: space-between
             margin-top: auto
-            padding: 0 .5rem .25rem 0
+            padding: 0 1rem .5rem 1rem
             font-family: $secondary-font
             font-size: 1rem
-            justify-content: flex-end
-            a:hover
+            .misc-right:hover
                 span
-                    color: $primary-color
                     transition: .25s
+                    color: $primary-color
 
 // Mobile breakpoint style
 @media only screen and (max-width: 768px)
@@ -212,11 +229,15 @@ h2
 
         .left
             .infobox
-                min-height: 90%
+                min-height: 92.5%
                 img
                     padding-top: 1rem
+                h1
+                    font-size: 1.5rem
+                    padding: 0 .5rem 0 .5rem
+                    text-align: center
             nav
-                min-height: 10%
+                min-height: 7.5%
         
         .right
             section
@@ -224,5 +245,7 @@ h2
                 ul,
                 p
                     flex-basis: 80%
-                h2
+                h3
                     flex-basis: 20%
+            .misc
+                font-size: .75rem

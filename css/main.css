@@ -34,13 +34,23 @@ a {
 
 h1,
 h2,
+h3,
 p,
 ul {
   margin: 0;
   padding: 0;
 }
 
+h1 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 h2 {
+  font-size: 1.25rem;
+}
+
+h3 {
   font-size: 0.75rem;
   font-weight: 500;
 }
@@ -64,6 +74,13 @@ h2 {
 }
 
 .container .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   background-color: #ff383B;
   overflow: hidden;
 }
@@ -93,13 +110,14 @@ h2 {
   padding-bottom: 1rem;
 }
 
-.container .left .infobox h1,
-.container .left .infobox p {
+.container .left .infobox h1 {
   line-height: 2rem;
 }
 
 .container .left .infobox a {
-  padding: 0.25rem 2rem;
+  font-weight: 700;
+  margin-top: .5rem;
+  padding: 0.5rem 3rem;
   border-radius: 3px;
   background-color: #f8f8f8;
   display: inline-block;
@@ -185,7 +203,7 @@ h2 {
   padding: 0 4rem 1rem 4rem;
 }
 
-.container .right section h2 {
+.container .right section h3 {
   color: #B50C0F;
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
@@ -201,12 +219,22 @@ h2 {
 }
 
 .container .right section ul {
-  list-style-type: circle;
-  padding-left: 3rem;
+  list-style-type: none;
+  padding-left: 1rem;
+}
+
+.container .right section ul li {
+  font-weight: 800;
+}
+
+.container .right section ul i {
+  padding-right: .5rem;
+  padding-bottom: .25rem;
+  color: #B50C0F;
 }
 
 .container .right section p {
-  padding-left: 1.75rem;
+  padding-left: .75rem;
 }
 
 .container .right .about {
@@ -227,20 +255,27 @@ h2 {
   font-weight: 700;
 }
 
-.container .right .credits {
+.container .right .misc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: auto;
-  padding: 0 .5rem .25rem 0;
+  padding: 0 1rem .5rem 1rem;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
-.container .right .credits a:hover span {
-  color: #ff383B;
+.container .right .misc .misc-right:hover span {
   -webkit-transition: .25s;
   transition: .25s;
+  color: #ff383B;
 }
 
 @media only screen and (max-width: 768px) {
@@ -262,13 +297,18 @@ h2 {
     min-height: 100%;
   }
   .container .left .infobox {
-    min-height: 90%;
+    min-height: 92.5%;
   }
   .container .left .infobox img {
     padding-top: 1rem;
   }
+  .container .left .infobox h1 {
+    font-size: 1.5rem;
+    padding: 0 .5rem 0 .5rem;
+    text-align: center;
+  }
   .container .left nav {
-    min-height: 10%;
+    min-height: 7.5%;
   }
   .container .right section {
     padding: .5rem 1rem;
@@ -278,9 +318,12 @@ h2 {
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
   }
-  .container .right section h2 {
+  .container .right section h3 {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+  .container .right .misc {
+    font-size: .75rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
