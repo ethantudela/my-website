@@ -213,8 +213,8 @@ h3 {
 
 .container .right section p,
 .container .right section ul {
-  -ms-flex-preferred-size: 90%;
-      flex-basis: 90%;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
   text-align: start;
 }
 
@@ -304,14 +304,14 @@ h3 {
   }
   .container .left .infobox h1 {
     font-size: 1.5rem;
-    padding: 0 .5rem 0 .5rem;
+    padding: 0 1rem;
     text-align: center;
   }
   .container .left nav {
     min-height: 7.5%;
   }
   .container .right section {
-    padding: .5rem 1rem;
+    padding: .5rem 2rem;
   }
   .container .right section ul,
   .container .right section p {
@@ -321,6 +321,9 @@ h3 {
   .container .right section h3 {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
+  }
+  .container .right .skill > ul > li > span {
+    padding-left: .75rem;
   }
   .container .right .misc {
     font-size: .75rem;
