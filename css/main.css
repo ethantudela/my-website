@@ -99,7 +99,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 95%;
+  min-height: 94%;
   width: 100%;
 }
 
@@ -156,7 +156,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  min-height: 5%;
+  min-height: 6%;
   width: 100%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -315,7 +315,7 @@ h3 {
     min-height: 7.5%;
   }
   .container .right section {
-    padding: .5rem 2rem;
+    padding: 0 1rem .5rem 1rem;
   }
   .container .right section ul,
   .container .right section p {
@@ -328,6 +328,32 @@ h3 {
   }
   .container .right .misc {
     font-size: .75rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .container .right section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 2rem 1rem 2rem;
+  }
+  .container .right section h3 {
+    -ms-flex-preferred-size: 15%;
+        flex-basis: 15%;
+    text-align: end;
+    padding-top: .25rem;
+    padding-right: 1rem;
+  }
+  .container .right section p,
+  .container .right section ul {
+    -ms-flex-preferred-size: 85%;
+        flex-basis: 85%;
+    text-align: start;
+  }
+  .container .right section ul > li > i {
+    padding-bottom: .25rem;
+    padding-right: 1rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
