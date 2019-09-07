@@ -144,6 +144,10 @@ h3 {
   background-color: #f8f8f8;
 }
 
+.container .left .wrapper {
+  width: 26rem;
+}
+
 .container .left nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -209,6 +213,7 @@ h3 {
       flex-basis: 10%;
   text-align: end;
   padding-top: .25rem;
+  padding-right: 1rem;
 }
 
 .container .right section p,
@@ -220,7 +225,6 @@ h3 {
 
 .container .right section ul {
   list-style-type: none;
-  padding-left: 1rem;
 }
 
 .container .right section ul li {
@@ -233,13 +237,9 @@ h3 {
   color: #B50C0F;
 }
 
-.container .right section p {
-  padding-left: .75rem;
-}
-
 .container .right .about {
   margin-top: 4rem;
-  line-height: 1.5rem;
+  line-height: 1.5;
 }
 
 .container .right .experience-list {
@@ -305,8 +305,11 @@ h3 {
   }
   .container .left .infobox h1 {
     font-size: 1.5rem;
-    padding: 0 1rem;
-    text-align: center;
+    padding: 0 3.25rem;
+    text-align: start;
+  }
+  .container .left .wrapper {
+    padding: 0 1rem 0 1rem;
   }
   .container .left nav {
     min-height: 7.5%;
@@ -322,9 +325,6 @@ h3 {
   .container .right section h3 {
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
-  }
-  .container .right .skill > ul > li > span {
-    padding-left: 1.5rem;
   }
   .container .right .misc {
     font-size: .75rem;
