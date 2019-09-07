@@ -266,7 +266,7 @@ h3 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: auto;
-  padding: 0 1rem .5rem 1rem;
+  padding: 0 1rem 1rem 1rem;
   font-family: "Lato", sans-serif;
   font-size: 1rem;
 }
