@@ -129,7 +129,7 @@ h3
             +flex-column-nowrap
             +flex-center
             //animation: fadein 2s
-            min-height: 94%
+            min-height: 95%
             width: 100%
 
             img
@@ -154,7 +154,7 @@ h3
         // Links to online profiles
         nav
             +flex-row-nowrap
-            min-height: 6%
+            min-height: 5%
             width: 100%
             justify-content: flex-end
             align-content: flex-end
@@ -190,10 +190,8 @@ h3
                 li
                     font-weight: 800
                 i
-                    padding-right: .5rem
-                    padding-bottom: .25rem
                     color: $accent-color
-
+                    
         .about
             margin-top: 4rem
             line-height: 1.5
@@ -210,7 +208,7 @@ h3
             margin-top: auto
             padding: 0 1rem .5rem 1rem
             font-family: $secondary-font
-            font-size: 1rem
+            font-size: 1.25rem
             .misc-right:hover
                 span
                     transition: .25s
@@ -249,8 +247,13 @@ h3
                     flex-basis: 80%
                 h3
                     flex-basis: 20%
+            ul> li> i
+                padding-bottom: .25rem
+                padding-right: .5rem
             .misc
                 font-size: .75rem
+
+// Tablet and bigger styling
 @media only screen and (min-width: 1024px)
     .container
         .right
@@ -271,4 +274,4 @@ h3
 
                 ul> li> i
                         padding-bottom: .25rem
-                        padding-right: 1rem
+                        padding-right: .5rem
