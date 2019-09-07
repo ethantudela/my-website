@@ -99,7 +99,7 @@ h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 95%;
+  min-height: 94%;
   width: 100%;
 }
 
@@ -156,7 +156,7 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  min-height: 5%;
+  min-height: 6%;
   width: 100%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -268,7 +268,7 @@ h3 {
   margin-top: auto;
   padding: 0 1rem .5rem 1rem;
   font-family: "Lato", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 .container .right .misc .misc-right:hover span {
@@ -296,7 +296,7 @@ h3 {
     min-height: 100%;
   }
   .container .left .infobox {
-    min-height: 92.5%;
+    min-height: 94%;
   }
   .container .left .infobox img {
     padding-top: 1rem;
@@ -307,10 +307,10 @@ h3 {
     text-align: start;
   }
   .container .left .wrapper {
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem 0 1.5rem;
   }
   .container .left nav {
-    min-height: 7.5%;
+    min-height: 6%;
   }
   .container .right section {
     padding: 0 1rem .5rem 1rem;
