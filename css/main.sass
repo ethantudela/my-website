@@ -1,3 +1,4 @@
+
 // Variables
 $primary-color: #ff383B
 $secondary-color: #6b0806
@@ -5,8 +6,12 @@ $text-color: #140101
 $accent-color: #B50C0F
 $background-color: #f8f8f8
 $hover-color: #ff9999
-$primary-font: "Roboto", sans-serif
-$secondary-font: "Lato", sans-serif
+$font: "San Francisco", sans-serif
+
+// Apple SF Font
+@font-face
+  font-family: "San Francisco"
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff")
 
 // Flexbox Mixins
 =flex-row-nowrap
@@ -20,6 +25,10 @@ $secondary-font: "Lato", sans-serif
 =flex-center
     align-items: center
     justify-content: center
+
+=flex-end
+    align-items: flex-end
+    justify-content: flex-end
 
 // Margin and Padding reset mixin
 =reset
@@ -77,37 +86,27 @@ body
     +fullsize
 
     color: $text-color
-    font-family: $primary-font
-
-a,
-ul,
-p,
-li
-    font-family: $secondary-font
+    font-family: $font
 
 a
     color: $text-color
     text-decoration: none
 
-// Margin and padding reset for h1, h2, h3, p and ul
+// Margin and padding reset for h1, h2, p and ul
 h1,
 h2,
-h3,
 p,
 ul
     +reset
 
-// h1, h2, h3 font styling
+// h1 & h2 font styling
 h1
     font-size: 2rem
-    font-weight: 500
 
 h2
-    font-size: 1.25rem
+    font-size: 1rem
+    font-weight: 500
 
-h3
-    font-size: 0.75rem
-    font-weight: 600
 
 // Container for split page
 .container
@@ -140,12 +139,13 @@ h3
 
             h1
                 line-height: 2rem
+                font-weight: 500
 
             a
                 font-weight: 700
                 margin-top: .5rem
-                padding: 0.5rem 3rem
-                border-radius: 3px
+                padding: .5rem 3rem
+                border-radius: .25rem
                 background-color: $background-color
                 +hover-back-pulse
         .wrapper
@@ -155,15 +155,16 @@ h3
         nav
             +flex-row-nowrap
             +flex-center
+            +flex-end
             min-height: 5%
             width: 100%
-            justify-content: flex-end
-            align-content: flex-end
 
             a
                 +hover-grow
                 font-size: 2rem
                 padding-right: 1rem
+                &:last-child
+                    padding-right: 2rem
 
     // Right half
     .right
@@ -172,30 +173,30 @@ h3
         background-color: $background-color
         section
             display: flex
-            padding: 0 4rem 1rem 4rem
+            padding: 0 2rem 1rem 2rem
 
-            h3
+            h2
                 color: $accent-color
-                flex-basis: 10%
+                flex-basis: 20%
                 text-align: end
-                padding-top: .25rem
                 padding-right: 1rem
 
             p,
             ul
-                flex-basis: 75%
+                flex-basis: 80%
                 text-align: start
 
             ul
                 list-style-type: none
                 li
-                    font-weight: 800
+                    padding-bottom: .25rem
                 i
                     color: $accent-color
+                    padding-right: .5rem
                     
         .about
-            margin-top: 4rem
-            line-height: 1.5
+            margin-top: 3rem
+            line-height: 1.75
 
         .experience-list
             +flex-column-nowrap
@@ -207,11 +208,12 @@ h3
             +flex-row-nowrap
             justify-content: space-between
             margin-top: auto
-            padding: 0 1rem 1rem 1rem
-            font-family: $secondary-font
+            padding: 0 1.5rem .5rem 1.5rem
             font-size: 1rem
+
             .misc-left:hover
                 +hover-grow
+  
             .misc-right:hover
                 span
                     transition: .25s
@@ -230,7 +232,7 @@ h3
 
         .left
             .infobox
-                min-height: 94%
+                min-height: 95%
                 img
                     padding-top: 1rem
                 h1
@@ -240,11 +242,13 @@ h3
             .wrapper
                 padding: 0 1rem 0 1.5rem
             nav
-                min-height: 6%
+                min-height: 5%
+                a:last-child
+                        padding-right: 1rem
         
         .right
             section
-                padding: 0 .5rem .5rem .5rem
+                padding: 0 .5rem 1rem .5rem
                 +flex-row-nowrap
 
                 ul,
@@ -252,11 +256,10 @@ h3
                     flex-basis: 80%
                     text-align: start
 
-                h3
+                h2
                     flex-basis: 20%
                     text-align: end
-                    padding-top: .25rem
-                    padding-right: .5rem
+                    padding-right: .75rem
             ul> li> i
                 padding-bottom: .25rem
                 padding-right: .5rem
@@ -264,14 +267,14 @@ h3
                 font-size: .75rem
 
 // Tablet and bigger styling
-@media only screen and (min-width: 1024px)
+@media only screen and (min-width: 1024px) and (max-width: 1440px)
     .container
         .right
             section
                 display: flex
                 padding: 0 2rem 1rem 2rem
 
-                h3
+                h2
                     flex-basis: 15%
                     text-align: end
                     padding-top: .25rem
