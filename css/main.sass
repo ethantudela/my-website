@@ -107,7 +107,7 @@ h2
 
 h3
     font-size: 0.75rem
-    font-weight: 500
+    font-weight: 600
 
 // Container for split page
 .container
@@ -129,7 +129,7 @@ h3
             +flex-column-nowrap
             +flex-center
             //animation: fadein 2s
-            min-height: 95%
+            min-height: 93%
             width: 100%
 
             img
@@ -154,7 +154,7 @@ h3
         // Links to online profiles
         nav
             +flex-row-nowrap
-            min-height: 5%
+            min-height: 7%
             width: 100%
             justify-content: flex-end
             align-content: flex-end
@@ -209,6 +209,8 @@ h3
             padding: 0 1rem 1rem 1rem
             font-family: $secondary-font
             font-size: 1rem
+            .misc-left:hover
+                +hover-grow
             .misc-right:hover
                 span
                     transition: .25s
@@ -241,12 +243,19 @@ h3
         
         .right
             section
-                padding: 0 1rem .5rem 1rem
+                padding: 0 .5rem .5rem .5rem
+                +flex-row-nowrap
+
                 ul,
                 p
                     flex-basis: 80%
+                    text-align: start
+
                 h3
                     flex-basis: 20%
+                    text-align: end
+                    padding-top: .25rem
+                    padding-right: .5rem
             ul> li> i
                 padding-bottom: .25rem
                 padding-right: .5rem
