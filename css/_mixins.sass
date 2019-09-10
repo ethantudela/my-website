@@ -1,0 +1,65 @@
+// Flexbox Mixins
+=flex-row-nowrap
+    display: flex
+    flex-flow: row nowrap
+
+=flex-column-nowrap
+    display: flex
+    flex-flow: column nowrap
+
+=flex-center
+    align-items: center
+    justify-content: center
+
+=flex-end
+    align-items: flex-end
+    justify-content: flex-end
+
+// Margin and Padding reset mixin
+=reset
+    margin: 0
+    padding: 0
+
+// Full width and height mixin
+=fullsize
+    height: 100%
+    width: 100%
+
+// Full width
+=fullwidth
+    width: 100%
+
+// Hover.css - Grow hover effect
+=hover-grow
+    display: inline-block
+    vertical-align: middle
+    transform: perspective(1px) translateZ(0)
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+    transition-duration: 0.3s
+    transition-property: transform
+    &:hover,
+    &:focus,
+    &:active,
+        transform: scale(1.2)
+
+// Hover.css - Back pulse effect
+=hover-back-pulse
+    display: inline-block
+    vertical-align: middle
+    transform: perspective(1px) translateZ(0)
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+    transition-duration: 0.5s
+    transition-property: background-color
+    &:hover,
+    &:focus,
+    &:active,
+        animation-name: back-pulse
+        animation-duration: 1s
+        animation-timing-function: linear
+        animation-iteration-count: infinite
+        background-color: $background-color
+        
+@keyframes back-pulse
+  50%
+    background-color: $hover-color
+// Shoutout to Hover.css :)

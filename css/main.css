@@ -1,14 +1,9 @@
-@font-face {
-  font-family: "San Francisco";
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
-
+@import url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 @-webkit-keyframes back-pulse {
   50% {
     background-color: #ff9999;
   }
 }
-
 @keyframes back-pulse {
   50% {
     background-color: #ff9999;
@@ -21,6 +16,7 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  background-color: #f8f8f8;
   color: #140101;
   font-family: "San Francisco", sans-serif;
 }
