@@ -1,3 +1,12 @@
+class NightMode {
+    this.left = document.querySelector(left);
+    this.right = document.querySelector(right);
+    this.button = document.querySelector(night);
+    this.toggle();
+}
+    toggle() {
+
+    }
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
         this.txtElement = txtElement;

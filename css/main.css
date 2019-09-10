@@ -43,6 +43,14 @@ h2 {
   font-weight: 500;
 }
 
+.night-mode-primary {
+  background: #0095ff;
+}
+
+.night-mode-background {
+  background: #787878;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
