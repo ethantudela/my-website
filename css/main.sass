@@ -10,17 +10,14 @@
 // Base Styles
 html,
 body
-    +reset
     +fullsize
-    background-color: $background-color
-    color: $text-color
     font-family: $font
 
 a
-    color: $text-color
     text-decoration: none
 
 // Margin and padding reset for h1, h2, p and ul
+body,
 h1,
 h2,
 p,
@@ -35,13 +32,6 @@ h2
     font-size: 1rem
     font-weight: 500
 
-// Night mode styling
-.night-mode-primary
-    background: $night-mode-primary
-.night-mode-background
-    background: $night-mode-background
-
-
 // Container for split page
 .container
     +flex-row-nowrap
@@ -55,14 +45,63 @@ h2
     // Left Half
     .left
         +flex-column-nowrap
-        background-color: $primary-color
         overflow: hidden
 
+        .button-container
+            width: 2rem
+            margin-top: .5rem
+            margin-left: .5rem
+            transform: rotate(180deg)
+
+            .nightmode
+            position: relative
+            width: 4rem
+            user-select: none
+
+            .nightmode-checkbox
+                display: none
+
+            .nightmode-label
+                display: block
+                overflow: hidden
+                cursor: pointer
+                height: 2rem
+                padding: 0
+                line-height: 2rem
+                border: .125rem solid #E3E3E3
+                border-radius: 2rem
+                background-color: $primary-color
+                transition: background-color 0.3s ease-in
+            
+            .nightmode-label:before
+                content: ""
+                display: block
+                width: 2rem
+                margin: 0
+                background: #FFFFFF
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 2rem
+                border: .125rem solid #E3E3E3 
+                border-radius: 2rem
+                transition: all 0.3s ease-in 0s 
+            
+            .nightmode-checkbox:checked + .nightmode-label
+                background-color: $nightmode-primary
+            
+            .nightmode-checkbox:checked + .nightmode-label,
+            .nightmode-checkbox:checked + .nightmode-label:before
+                border-color: $background-color
+            
+            .nightmode-checkbox:checked + .nightmode-label:before
+                left: 0
+                
         .infobox
             +flex-column-nowrap
             +flex-center
             //animation: fadein 2s
-            min-height: 95%
+            min-height: 90%
             width: 100%
 
             img
@@ -80,8 +119,8 @@ h2
                 margin-top: .5rem
                 padding: .5rem 3rem
                 border-radius: .25rem
-                background-color: $background-color
                 +hover-back-pulse
+
         .wrapper
             width: 26rem
 
@@ -104,13 +143,11 @@ h2
     .right
         +flex-column-nowrap
         +fullsize
-        background-color: $background-color
         section
             display: flex
             padding: 0 2rem 1rem 2rem
 
             h2
-                color: $accent-color
                 flex-basis: 20%
                 text-align: end
                 padding-right: 1rem
@@ -125,12 +162,11 @@ h2
                 li
                     padding-bottom: .25rem
                 i
-                    color: $accent-color
                     padding-right: .5rem
                     
         .about
             margin-top: 3rem
-            line-height: 1.75
+            line-height: 1.75rem
 
         .experience-list
             +flex-column-nowrap
@@ -147,12 +183,51 @@ h2
 
             .misc-left:hover
                 +hover-grow
-  
-            .misc-right:hover
-                span
-                    transition: .25s
-                    color: $primary-color
 
+// Night mode implement
+.left-light
+    background-color: $primary-color
+    a
+        color: $text-color
+    .infobox > a
+        background-color: $background-color
+
+.right-light
+    background-color: $background-color
+    section > h2,
+    .fa-check-circle,
+        color: $secondary-color
+    
+    .misc > a
+        color: $text-color
+
+    .misc > .misc-right:hover > span
+        transition: .25s
+        color: $primary-color
+
+.left-night
+    background-color: $nightmode-primary
+    
+    a
+        color: $nightmode-text
+    
+    .infobox > a
+        background-color: $nightmode-background
+
+.right-night
+    background-color: $nightmode-background
+    
+    section
+        color: $nightmode-text
+    
+    section > h2,
+    .fa-check-circle,
+        color: $nightmode-secondary
+    .misc > a
+        color: $nightmode-text
+    .misc > .misc-right:hover > span
+        transition: .5s
+        color: $nightmode-secondary
 // Mobile breakpoint style
 @media only screen and (max-width: 768px)
     .container

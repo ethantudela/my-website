@@ -1,31 +1,27 @@
 @import url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 @-webkit-keyframes back-pulse {
   50% {
-    background-color: #ff9999;
+    background-color: inherit;
   }
 }
 @keyframes back-pulse {
   50% {
-    background-color: #ff9999;
+    background-color: inherit;
   }
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #f8f8f8;
-  color: #140101;
   font-family: "San Francisco", sans-serif;
 }
 
 a {
-  color: #140101;
   text-decoration: none;
 }
 
+body,
 h1,
 h2,
 p,
@@ -41,14 +37,6 @@ h1 {
 h2 {
   font-size: 1rem;
   font-weight: 500;
-}
-
-.night-mode-primary {
-  background: #0095ff;
-}
-
-.night-mode-background {
-  background: #787878;
 }
 
 .container {
@@ -77,8 +65,68 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  background-color: #ff383B;
   overflow: hidden;
+}
+
+.container .left .button-container {
+  width: 2rem;
+  margin-top: .5rem;
+  margin-left: .5rem;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  position: relative;
+  width: 4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container .left .button-container .nightmode-checkbox {
+  display: none;
+}
+
+.container .left .button-container .nightmode-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 2rem;
+  padding: 0;
+  line-height: 2rem;
+  border: .125rem solid #E3E3E3;
+  border-radius: 2rem;
+  background-color: #ff383B;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
+}
+
+.container .left .button-container .nightmode-label:before {
+  content: "";
+  display: block;
+  width: 2rem;
+  margin: 0;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2rem;
+  border: .125rem solid #E3E3E3;
+  border-radius: 2rem;
+  -webkit-transition: all 0.3s ease-in 0s;
+  transition: all 0.3s ease-in 0s;
+}
+
+.container .left .button-container .nightmode-checkbox:checked + .nightmode-label {
+  background-color: #0095ff;
+}
+
+.container .left .button-container .nightmode-checkbox:checked + .nightmode-label,
+.container .left .button-container .nightmode-checkbox:checked + .nightmode-label:before {
+  border-color: #f8f8f8;
+}
+
+.container .left .button-container .nightmode-checkbox:checked + .nightmode-label:before {
+  left: 0;
 }
 
 .container .left .infobox {
@@ -95,7 +143,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 95%;
+  min-height: 90%;
   width: 100%;
 }
 
@@ -116,7 +164,6 @@ h2 {
   margin-top: .5rem;
   padding: .5rem 3rem;
   border-radius: .25rem;
-  background-color: #f8f8f8;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -132,13 +179,12 @@ h2 {
 .container .left .infobox a:hover, .container .left .infobox a:focus, .container .left .infobox a:active {
   -webkit-animation-name: back-pulse;
           animation-name: back-pulse;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  background-color: #f8f8f8;
 }
 
 .container .left .wrapper {
@@ -205,7 +251,6 @@ h2 {
           flex-flow: column nowrap;
   height: 100%;
   width: 100%;
-  background-color: #f8f8f8;
 }
 
 .container .right section {
@@ -216,7 +261,6 @@ h2 {
 }
 
 .container .right section h2 {
-  color: #B50C0F;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
   text-align: end;
@@ -239,13 +283,12 @@ h2 {
 }
 
 .container .right section ul i {
-  color: #B50C0F;
   padding-right: .5rem;
 }
 
 .container .right .about {
   margin-top: 3rem;
-  line-height: 1.75;
+  line-height: 1.75rem;
 }
 
 .container .right .experience-list {
@@ -298,10 +341,70 @@ h2 {
           transform: scale(1.2);
 }
 
-.container .right .misc .misc-right:hover span {
+.left-light {
+  background-color: #ff383B;
+}
+
+.left-light a {
+  color: #140101;
+}
+
+.left-light .infobox > a {
+  background-color: #f8f8f8;
+}
+
+.right-light {
+  background-color: #f8f8f8;
+}
+
+.right-light section > h2,
+.right-light .fa-check-circle {
+  color: #B50C0F;
+}
+
+.right-light .misc > a {
+  color: #140101;
+}
+
+.right-light .misc > .misc-right:hover > span {
   -webkit-transition: .25s;
   transition: .25s;
   color: #ff383B;
+}
+
+.left-night {
+  background-color: #0095ff;
+}
+
+.left-night a {
+  color: #ffffff;
+}
+
+.left-night .infobox > a {
+  background-color: #15202B;
+}
+
+.right-night {
+  background-color: #15202B;
+}
+
+.right-night section {
+  color: #ffffff;
+}
+
+.right-night section > h2,
+.right-night .fa-check-circle {
+  color: #0C52E8;
+}
+
+.right-night .misc > a {
+  color: #ffffff;
+}
+
+.right-night .misc > .misc-right:hover > span {
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #0C52E8;
 }
 
 @media only screen and (max-width: 768px) {
