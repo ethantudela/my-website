@@ -36,6 +36,7 @@ h2
 .container
     +flex-row-nowrap
     +fullsize
+
     // Left half & Right half
     .left,
     .right
@@ -45,13 +46,15 @@ h2
     .left
         +flex-column-nowrap
         overflow: hidden
-
+        
+        // Container for night mode button
         .button-container
             width: 2rem
             margin-top: .5rem
             margin-left: .5rem
             transform: rotate(180deg)
 
+            // Night mode button styling
             .nightmode
             position: relative
             width: 4rem
@@ -67,9 +70,9 @@ h2
                 height: 2rem
                 padding: 0
                 line-height: 2rem
-                border: .125rem solid #E3E3E3
+                border: .125rem solid #ffffff
                 border-radius: 2rem
-                background-color: $primary-color
+                background-color: inherit
                 transition: background-color 0.3s ease-in
             
             .nightmode-label:before
@@ -96,6 +99,7 @@ h2
             .nightmode-checkbox:checked + .nightmode-label:before
                 left: 0
                 
+        // Information box styling
         .infobox
             +flex-column-nowrap
             +flex-center
@@ -183,7 +187,7 @@ h2
             .misc-left:hover
                 +hover-grow
 
-// Night mode implement
+// Night mode CSS
 .left-light
     background-color: $primary-color
     a
@@ -201,8 +205,8 @@ h2
         color: $text-color
 
     .misc > .misc-right:hover > span
-        transition: .25s
-        color: $primary-color
+        transition: .5s
+        color: lighten($primary-color, 10%)
 
 .left-night
     background-color: $nightmode-primary
@@ -226,7 +230,8 @@ h2
         color: $nightmode-text
     .misc > .misc-right:hover > span
         transition: .5s
-        color: $nightmode-secondary
+        color: lighten($nightmode-secondary, 25%)
+
 // Mobile breakpoint style
 @media only screen and (max-width: 768px)
     .container

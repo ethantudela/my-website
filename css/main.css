@@ -93,9 +93,9 @@ h2 {
   height: 2rem;
   padding: 0;
   line-height: 2rem;
-  border: .125rem solid #E3E3E3;
+  border: .125rem solid #ffffff;
   border-radius: 2rem;
-  background-color: #ff383B;
+  background-color: inherit;
   -webkit-transition: background-color 0.3s ease-in;
   transition: background-color 0.3s ease-in;
 }
@@ -170,8 +170,8 @@ h2 {
           transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
   -webkit-transition-property: background-color;
   transition-property: background-color;
 }
@@ -179,8 +179,8 @@ h2 {
 .container .left .infobox a:hover, .container .left .infobox a:focus, .container .left .infobox a:active {
   -webkit-animation-name: back-pulse;
           animation-name: back-pulse;
-  -webkit-animation-duration: 1.5s;
-          animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
@@ -367,9 +367,9 @@ h2 {
 }
 
 .right-light .misc > .misc-right:hover > span {
-  -webkit-transition: .25s;
-  transition: .25s;
-  color: #ff383B;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #ff6b6d;
 }
 
 .left-night {
@@ -404,7 +404,7 @@ h2 {
 .right-night .misc > .misc-right:hover > span {
   -webkit-transition: .5s;
   transition: .5s;
-  color: #0C52E8;
+  color: #7ba3f8;
 }
 
 @media only screen and (max-width: 768px) {
