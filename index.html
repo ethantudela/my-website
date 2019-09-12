@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,6 @@
     <!-- Website icon -->
     <link rel="shortcut icon" href="favicon.ico">
     
-    <script src="main.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137053294-1"></script>
@@ -56,7 +54,13 @@
 
 <body>
     <div class="container">
-        <div class="left">
+        <div class="left left-light">
+            <div class="button-container">
+                <div class="nightmode">
+                    <input type="checkbox" name="nightmode" class="nightmode-checkbox" id="mynightmode" onclick="nightMode()">
+                    <label class="nightmode-label" for="mynightmode" ></label>
+                </div>
+            </div>
             <div class="infobox">
                 <img src="img\picture-of-me.jpg" alt="Picture of Me">
                 <div class="wrapper">
@@ -71,7 +75,7 @@
                 <a href="https://stackoverflow.com/users/10292365/ethan-tudela"><i class="fab fa-stack-overflow"></i></a>
             </nav>
         </div>
-        <div class="right">
+        <div class="right right-light">
             <section class="about">
                 <h2>About Me</h2>
                 <p>I'm a freelance website designer and developer currently based in Gainesville, Florida.<br>I specialize in front-end development with a working knowledge of back-end technologies.</p>
@@ -113,7 +117,7 @@
             </section>
         </div>
     </div>
-
+    <script src="js\main.js"></script>
 </body>
 
 </html>

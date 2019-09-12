@@ -1,3 +1,4 @@
+// Typing animations
 class TypeWriter {
     constructor(txtElement, words, wait = 3000) {
         this.txtElement = txtElement;
@@ -60,4 +61,25 @@ function init() {
     const wait = txtElement.getAttribute('data-wait');
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
+}
+
+// Night Mode
+function nightMode() {
+    // Button variable
+    const button = document.querySelector("#mynightmode");
+
+    // Left half class variable
+    const left = document.querySelector("body > div > div.left");
+
+    // Right half class variable
+    const right = document.querySelector("body > div > div.right");
+    
+    // If button checked replace CSS classes for night mode classes
+    if (button.checked) {
+      left.classList.replace("left-light", "left-night");
+      right.classList.replace("right-light","right-night");
+    } else {
+      left.classList.replace("left-night", "left-light");
+      right.classList.replace("right-night","right-light");
+    }
 }

@@ -48,7 +48,7 @@
     vertical-align: middle
     transform: perspective(1px) translateZ(0)
     box-shadow: 0 0 1px rgba(0, 0, 0, 0)
-    transition-duration: 0.5s
+    transition-duration: 1s
     transition-property: background-color
     &:hover,
     &:focus,
@@ -57,9 +57,8 @@
         animation-duration: 1s
         animation-timing-function: linear
         animation-iteration-count: infinite
-        background-color: $background-color
         
 @keyframes back-pulse
   50%
-    background-color: $hover-color
+    background-color: inherit
 // Shoutout to Hover.css :)
