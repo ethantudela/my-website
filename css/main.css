@@ -155,8 +155,8 @@ h2 {
 }
 
 .container .left .infobox h1 {
-  line-height: 2rem;
-  font-weight: 500;
+  line-height: 2.5rem;
+  font-weight: 700;
 }
 
 .container .left .infobox a {
@@ -188,7 +188,7 @@ h2 {
 }
 
 .container .left .wrapper {
-  width: 26rem;
+  width: 27rem;
 }
 
 .container .left nav {
@@ -374,6 +374,10 @@ h2 {
 
 .left-night {
   background-color: #0095ff;
+}
+
+.left-night .infobox > div > h1 {
+  color: #ffffff;
 }
 
 .left-night a {
