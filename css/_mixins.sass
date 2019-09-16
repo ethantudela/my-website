@@ -43,22 +43,41 @@
         transform: scale(1.2)
 
 // Hover.css - Back pulse effect
-=hover-back-pulse
+=hover-back-pulse-light
     display: inline-block
     vertical-align: middle
     transform: perspective(1px) translateZ(0)
     box-shadow: 0 0 1px rgba(0, 0, 0, 0)
-    transition-duration: 1s
+    transition-duration: 2s
+    transition-property: ease-in-out
+    &:hover,
+    &:focus,
+    &:active,
+        animation-name: back-pulse-light
+        animation-duration: 2s
+        animation-timing-function: linear
+        animation-iteration-count: infinite
+
+@keyframes back-pulse-light
+  50%
+    background-color: lighten($secondary-color, 25%)
+
+=hover-back-pulse-night
+    display: inline-block
+    vertical-align: middle
+    transform: perspective(1px) translateZ(0)
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0)
+    transition-duration: 2s
     transition-property: background-color
     &:hover,
     &:focus,
     &:active,
-        animation-name: back-pulse
-        animation-duration: 1s
+        animation-name: back-pulse-night
+        animation-duration: 2s
         animation-timing-function: linear
         animation-iteration-count: infinite
-        
-@keyframes back-pulse
+
+@keyframes back-pulse-night
   50%
-    background-color: inherit
+    background-color: $nightmode-secondary
 // Shoutout to Hover.css :)

@@ -103,7 +103,6 @@ h2
         .infobox
             +flex-column-nowrap
             +flex-center
-            //animation: fadein 2s
             min-height: 90%
             width: 100%
 
@@ -122,7 +121,6 @@ h2
                 margin-top: .5rem
                 padding: .5rem 3rem
                 border-radius: .25rem
-                +hover-back-pulse
 
         .wrapper
             width: 27rem
@@ -194,6 +192,7 @@ h2
         color: $text-color
     .infobox > a
         background-color: $background-color
+        +hover-back-pulse-light
 
 .right-light
     background-color: $background-color
@@ -203,10 +202,6 @@ h2
     
     .misc > a
         color: $text-color
-
-    .misc > .misc-right:hover > span
-        transition: .5s
-        color: lighten($primary-color, 10%)
 
 .left-night
     background-color: $nightmode-primary
@@ -218,6 +213,7 @@ h2
     
     .infobox > a
         background-color: $nightmode-background
+        +hover-back-pulse-night
 
 .right-night
     background-color: $nightmode-background
@@ -230,9 +226,6 @@ h2
         color: $nightmode-secondary
     .misc > a
         color: $nightmode-text
-    .misc > .misc-right:hover > span
-        transition: .5s
-        color: lighten($nightmode-secondary, 25%)
 
 // Mobile breakpoint style
 @media only screen and (max-width: 768px)

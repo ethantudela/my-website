@@ -1,12 +1,24 @@
 @import url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-@-webkit-keyframes back-pulse {
+@-webkit-keyframes back-pulse-light {
   50% {
-    background-color: inherit;
+    background-color: #e79293;
   }
 }
-@keyframes back-pulse {
+@keyframes back-pulse-light {
   50% {
-    background-color: inherit;
+    background-color: #e79293;
+  }
+}
+
+@-webkit-keyframes back-pulse-night {
+  50% {
+    background-color: #0C52E8;
+  }
+}
+
+@keyframes back-pulse-night {
+  50% {
+    background-color: #0C52E8;
   }
 }
 
@@ -164,27 +176,6 @@ h2 {
   margin-top: .5rem;
   padding: .5rem 3rem;
   border-radius: .25rem;
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-          transform: perspective(1px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-}
-
-.container .left .infobox a:hover, .container .left .infobox a:focus, .container .left .infobox a:active {
-  -webkit-animation-name: back-pulse;
-          animation-name: back-pulse;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
 }
 
 .container .left .wrapper {
@@ -351,6 +342,27 @@ h2 {
 
 .left-light .infobox > a {
   background-color: #f8f8f8;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: ease-in-out;
+  transition-property: ease-in-out;
+}
+
+.left-light .infobox > a:hover, .left-light .infobox > a:focus, .left-light .infobox > a:active {
+  -webkit-animation-name: back-pulse-light;
+          animation-name: back-pulse-light;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .right-light {
@@ -359,17 +371,11 @@ h2 {
 
 .right-light section > h2,
 .right-light .fa-check-circle {
-  color: #B50C0F;
+  color: #CC2D30;
 }
 
 .right-light .misc > a {
   color: #140101;
-}
-
-.right-light .misc > .misc-right:hover > span {
-  -webkit-transition: .5s;
-  transition: .5s;
-  color: #ff6b6d;
 }
 
 .left-night {
@@ -386,6 +392,27 @@ h2 {
 
 .left-night .infobox > a {
   background-color: #15202B;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+.left-night .infobox > a:hover, .left-night .infobox > a:focus, .left-night .infobox > a:active {
+  -webkit-animation-name: back-pulse-night;
+          animation-name: back-pulse-night;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 .right-night {
@@ -403,12 +430,6 @@ h2 {
 
 .right-night .misc > a {
   color: #ffffff;
-}
-
-.right-night .misc > .misc-right:hover > span {
-  -webkit-transition: .5s;
-  transition: .5s;
-  color: #7ba3f8;
 }
 
 @media only screen and (max-width: 768px) {
