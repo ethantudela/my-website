@@ -1,12 +1,12 @@
 @import url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 @-webkit-keyframes back-pulse-light {
   50% {
-    background-color: #e79293;
+    background-color: #f34d50;
   }
 }
 @keyframes back-pulse-light {
   50% {
-    background-color: #e79293;
+    background-color: #f34d50;
   }
 }
 
@@ -27,6 +27,10 @@ body {
   height: 100%;
   width: 100%;
   font-family: "San Francisco", sans-serif;
+}
+
+ul {
+  list-style-type: none;
 }
 
 a {
@@ -82,8 +86,7 @@ h2 {
 
 .container .left .button-container {
   width: 2rem;
-  margin-top: .5rem;
-  margin-left: .5rem;
+  margin: .5rem 0 0 .5rem;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   position: relative;
@@ -160,8 +163,8 @@ h2 {
 }
 
 .container .left .infobox img {
-  width: 10rem;
   height: 10rem;
+  width: 10rem;
   border-radius: 50%;
   padding-bottom: 1rem;
 }
@@ -224,8 +227,8 @@ h2 {
 }
 
 .container .left nav a:hover, .container .left nav a:focus, .container .left nav a:active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .container .left nav a:last-child {
@@ -265,12 +268,8 @@ h2 {
   text-align: start;
 }
 
-.container .right section ul {
-  list-style-type: none;
-}
-
 .container .right section ul li {
-  padding-bottom: .25rem;
+  padding-bottom: .5rem;
 }
 
 .container .right section ul i {
@@ -279,7 +278,7 @@ h2 {
 
 .container .right .about {
   margin-top: 3rem;
-  line-height: 1.75rem;
+  line-height: 2rem;
 }
 
 .container .right .experience-list {
@@ -308,7 +307,7 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: auto;
-  padding: 0 1.5rem .5rem 1.5rem;
+  padding: 0 2rem .5rem 2rem;
   font-size: 1rem;
 }
 
@@ -328,8 +327,8 @@ h2 {
 }
 
 .container .right .misc .misc-left:hover:hover, .container .right .misc .misc-left:hover:focus, .container .right .misc .misc-left:hover:active {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .left-light {
@@ -371,11 +370,20 @@ h2 {
 
 .right-light section > h2,
 .right-light .fa-check-circle {
-  color: #CC2D30;
+  color: #B50C0F;
 }
 
 .right-light .misc > a {
   color: #140101;
+}
+
+.right-light .misc > a > span {
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.right-light .misc > a:hover > span {
+  color: #ff383B;
 }
 
 .left-night {
@@ -400,19 +408,24 @@ h2 {
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
+  -webkit-transition-property: ease-in-out;
+  transition-property: ease-in-out;
 }
 
 .left-night .infobox > a:hover, .left-night .infobox > a:focus, .left-night .infobox > a:active {
-  -webkit-animation-name: back-pulse-night;
-          animation-name: back-pulse-night;
+  -webkit-animation-name: back-pulse-light;
+          animation-name: back-pulse-light;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
+}
+
+.left-night .infobox > a:hover, .left-night .infobox > a:focus, .left-night .infobox > a:active {
+  -webkit-animation-name: back-pulse-night;
+          animation-name: back-pulse-night;
 }
 
 .right-night {
@@ -430,6 +443,15 @@ h2 {
 
 .right-night .misc > a {
   color: #ffffff;
+}
+
+.right-night .misc > a > span {
+  -webkit-transition: color .5s;
+  transition: color .5s;
+}
+
+.right-night .misc > a:hover > span {
+  color: #0095ff;
 }
 
 @media only screen and (max-width: 768px) {

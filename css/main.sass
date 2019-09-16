@@ -13,6 +13,9 @@ body
     +fullsize
     font-family: $font
 
+ul
+    list-style-type: none
+    
 a
     text-decoration: none
 
@@ -23,7 +26,7 @@ h2,
 p,
 ul
     +reset
-
+// List bullet removals
 // h1 & h2 font styling
 h1
     font-size: 2rem
@@ -50,8 +53,9 @@ h2
         // Container for night mode button
         .button-container
             width: 2rem
-            margin-top: .5rem
-            margin-left: .5rem
+            margin: .5rem 0 0 .5rem
+            // margin-top: .5rem
+            // margin-left: .5rem
             transform: rotate(180deg)
 
             // Night mode button styling
@@ -107,17 +111,16 @@ h2
             width: 100%
 
             img
-                width: 10rem
-                height: 10rem
+                @include size(10rem,10rem)
                 border-radius: 50%
                 padding-bottom: 1rem
 
             h1
                 line-height: 2.5rem
-                font-weight: 700
+                font-weight: $bold
 
             a
-                font-weight: 700
+                font-weight: $bold
                 margin-top: .5rem
                 padding: .5rem 3rem
                 border-radius: .25rem
@@ -135,7 +138,7 @@ h2
 
             a
                 +hover-grow
-                font-size: 2rem
+                font-size: $medium
                 padding-right: 1rem
                 &:last-child
                     padding-right: 2rem
@@ -159,33 +162,31 @@ h2
                 text-align: start
 
             ul
-                list-style-type: none
                 li
-                    padding-bottom: .25rem
+                    padding-bottom: .5rem
                 i
                     padding-right: .5rem
-                    
         .about
             margin-top: 3rem
-            line-height: 1.75rem
+            line-height: 2rem
 
         .experience-list
             +flex-column-nowrap
 
         .experience-item > p > span
-            font-weight: 700
+            font-weight: $bold
         
         .misc
             +flex-row-nowrap
             justify-content: space-between
             margin-top: auto
-            padding: 0 1.5rem .5rem 1.5rem
+            padding: 0 2rem .5rem 2rem
             font-size: 1rem
 
             .misc-left:hover
                 +hover-grow
 
-// Night mode CSS
+// Night mode CSS classes
 .left-light
     background-color: $primary-color
     a
@@ -193,6 +194,8 @@ h2
     .infobox > a
         background-color: $background-color
         +hover-back-pulse-light
+    
+
 
 .right-light
     background-color: $background-color
@@ -202,6 +205,13 @@ h2
     
     .misc > a
         color: $text-color
+        
+    .misc > a > span
+        transition: color .5s
+
+    .misc > a:hover > span
+            color: $primary-color
+
 
 .left-night
     background-color: $nightmode-primary
@@ -224,8 +234,16 @@ h2
     section > h2,
     .fa-check-circle,
         color: $nightmode-secondary
+
     .misc > a
         color: $nightmode-text
+        
+    .misc > a > span
+        transition: color .5s
+
+    .misc > a:hover > span
+            color: $nightmode-primary
+
 
 // Mobile breakpoint style
 @media only screen and (max-width: 768px)
