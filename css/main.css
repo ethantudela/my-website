@@ -1,24 +1,24 @@
 @import url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 @-webkit-keyframes back-pulse-light {
   50% {
-    background-color: #f34d50;
+    background-color: #f67d7f;
   }
 }
 @keyframes back-pulse-light {
   50% {
-    background-color: #f34d50;
+    background-color: #f67d7f;
   }
 }
 
 @-webkit-keyframes back-pulse-night {
   50% {
-    background-color: #0C52E8;
+    background-color: #6392f7;
   }
 }
 
 @keyframes back-pulse-night {
   50% {
-    background-color: #0C52E8;
+    background-color: #6392f7;
   }
 }
 
@@ -216,12 +216,10 @@ h2 {
           transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
   font-size: 2rem;
   padding-right: 1rem;
 }
@@ -311,22 +309,20 @@ h2 {
   font-size: 1rem;
 }
 
-.container .right .misc .misc-left:hover {
+.container .right .misc .misc-left {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
           transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
 }
 
-.container .right .misc .misc-left:hover:hover, .container .right .misc .misc-left:hover:focus, .container .right .misc .misc-left:hover:active {
+.container .right .misc .misc-left:hover, .container .right .misc .misc-left:focus, .container .right .misc .misc-left:active {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
 }
@@ -347,21 +343,13 @@ h2 {
           transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-transition-property: ease-in-out;
-  transition-property: ease-in-out;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
 }
 
 .left-light .infobox > a:hover, .left-light .infobox > a:focus, .left-light .infobox > a:active {
-  -webkit-animation-name: back-pulse-light;
-          animation-name: back-pulse-light;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation: back-pulse-light 2s linear infinite;
+          animation: back-pulse-light 2s linear infinite;
 }
 
 .right-light {
@@ -406,21 +394,13 @@ h2 {
           transform: perspective(1px) translateZ(0);
   -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
           box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-transition-property: ease-in-out;
-  transition-property: ease-in-out;
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
 }
 
 .left-night .infobox > a:hover, .left-night .infobox > a:focus, .left-night .infobox > a:active {
-  -webkit-animation-name: back-pulse-light;
-          animation-name: back-pulse-light;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  -webkit-animation: back-pulse-light 2s linear infinite;
+          animation: back-pulse-light 2s linear infinite;
 }
 
 .left-night .infobox > a:hover, .left-night .infobox > a:focus, .left-night .infobox > a:active {

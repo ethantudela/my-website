@@ -40,8 +40,7 @@
     vertical-align: middle
     transform: perspective(1px) translateZ(0)
     box-shadow: 0 0 1px rgba(0, 0, 0, 0)
-    transition-duration: 0.3s
-    transition-property: transform
+    transition: transform .5s
     &:hover,
     &:focus,
     &:active,
@@ -53,19 +52,15 @@
     vertical-align: middle
     transform: perspective(1px) translateZ(0)
     box-shadow: 0 0 1px rgba(0, 0, 0, 0)
-    transition-duration: 2s
-    transition-property: ease-in-out
+    transition: ease-in-out .5s
     &:hover,
     &:focus,
     &:active,
-        animation-name: back-pulse-light
-        animation-duration: 2s
-        animation-timing-function: linear
-        animation-iteration-count: infinite
+        animation: back-pulse-light 2s linear infinite
 
 @keyframes back-pulse-light
   50%
-    background-color: lighten($secondary-color, 25%)
+    background-color: lighten($secondary-color, 35%)
 
 =hover-back-pulse-night
     +hover-back-pulse-light
@@ -76,5 +71,8 @@
 
 @keyframes back-pulse-night
   50%
-    background-color: $nightmode-secondary
+    background-color: lighten($nightmode-secondary, 20%)
+
+=hover-text
+    +hover-back-pulse-light
 // Shoutout to Hover.css :)
