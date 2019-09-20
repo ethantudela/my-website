@@ -48,10 +48,11 @@ h2
     // Left Half
     .left
         +flex-column-nowrap
-        overflow: hidden
+        overflow: scroll
         
         // Container for night mode button
         .button-container
+            align-self: flex-start
             width: 2rem
             margin: .5rem 0 0 .5rem
             // margin-top: .5rem
@@ -199,6 +200,10 @@ h2
 
 .right-light
     background-color: $background-color
+
+    section
+        background-color: $background-color
+
     section > h2,
     .fa-check-circle,
         color: $secondary-color
@@ -230,7 +235,8 @@ h2
     
     section
         color: $nightmode-text
-    
+        background-color: $nightmode-background
+
     section > h2,
     .fa-check-circle,
         color: $nightmode-secondary
