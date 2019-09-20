@@ -81,12 +81,10 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .container .left .button-container {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   width: 2rem;
   margin: .5rem 0 0 .5rem;
   -webkit-transform: rotate(180deg);
@@ -358,10 +356,6 @@ h2 {
   background-color: #f8f8f8;
 }
 
-.right-light section {
-  background-color: #f8f8f8;
-}
-
 .right-light section > h2,
 .right-light .fa-check-circle {
   color: #B50C0F;
@@ -420,7 +414,6 @@ h2 {
 
 .right-night section {
   color: #ffffff;
-  background-color: #15202B;
 }
 
 .right-night section > h2,
