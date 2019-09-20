@@ -81,7 +81,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .container .left .button-container {
