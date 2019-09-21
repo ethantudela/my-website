@@ -64,7 +64,6 @@ h2 {
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
   height: 100%;
-  width: 100%;
 }
 
 .container .left,
@@ -81,6 +80,7 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -158,8 +158,10 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 90%;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .container .left .infobox img {
@@ -182,31 +184,21 @@ h2 {
 }
 
 .container .left .wrapper {
-  width: 27rem;
+  padding: .5rem 0 0 .5rem;
 }
 
 .container .left nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  min-height: 5%;
   width: 100%;
+  margin-bottom: .5rem;
 }
 
 .container .left nav a {
@@ -452,28 +444,22 @@ h2 {
         flex-basis: 50%;
     min-height: 100%;
   }
-  .container .left .infobox {
-    min-height: 95%;
-  }
   .container .left .infobox img {
-    padding-top: 1rem;
+    height: 8rem;
+    width: 8rem;
   }
   .container .left .infobox h1 {
-    font-size: 1.5rem;
-    padding: 0 3.25rem;
-    text-align: start;
+    line-height: 1.5rem;
+    font-size: 1.25rem;
   }
   .container .left .wrapper {
-    padding: 0 1rem 0 1.5rem;
-  }
-  .container .left nav {
-    min-height: 5%;
+    padding: 0 1rem 0 1rem;
   }
   .container .left nav a:last-child {
     padding-right: 1rem;
   }
   .container .right section {
-    padding: 0 .5rem 1rem .5rem;
+    padding: 0 1rem 1rem 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -484,11 +470,13 @@ h2 {
   }
   .container .right section ul,
   .container .right section p {
+    font-size: 1rem;
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
     text-align: start;
   }
   .container .right section h2 {
+    font-size: 1.5rem;
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     text-align: end;
@@ -503,29 +491,40 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .container .left .infobox h1 {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
   .container .right section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 1rem 1rem 1rem;
   }
   .container .right section h2 {
-    -ms-flex-preferred-size: 15%;
-        flex-basis: 15%;
+    font-size: 1.5rem;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
     text-align: end;
-    padding-top: .25rem;
     padding-right: 1rem;
   }
   .container .right section p,
   .container .right section ul {
-    -ms-flex-preferred-size: 85%;
-        flex-basis: 85%;
+    font-size: 1.5rem;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
     text-align: start;
   }
   .container .right section ul > li > i {
     padding-bottom: .25rem;
     padding-right: .5rem;
+  }
+  .container .right .misc {
+    padding: 0 .5rem .5rem .5rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=main.css.map */

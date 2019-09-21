@@ -13,6 +13,7 @@ body
     +fullsize
     font-family: $font
 
+// Element reset
 ul
     list-style-type: none
     
@@ -26,7 +27,7 @@ h2,
 p,
 ul
     +reset
-// List bullet removals
+
 // h1 & h2 font styling
 h1
     font-size: 2rem
@@ -38,7 +39,7 @@ h2
 // Container for split page
 .container
     +flex-row-nowrap
-    +fullsize
+    height: 100%
 
     // Left half & Right half
     .left,
@@ -48,14 +49,13 @@ h2
     // Left Half
     .left
         +flex-column-nowrap
+        height: 100%
         overflow: hidden
         
         // Container for night mode button
         .button-container
             width: 2rem
             margin: .5rem 0 0 .5rem
-            // margin-top: .5rem
-            // margin-left: .5rem
             transform: rotate(180deg)
 
             // Night mode button styling
@@ -107,8 +107,8 @@ h2
         .infobox
             +flex-column-nowrap
             +flex-center
-            min-height: 90%
             width: 100%
+            flex-grow: 1
 
             img
                 @include size(10rem,10rem)
@@ -126,15 +126,14 @@ h2
                 border-radius: .25rem
 
         .wrapper
-            width: 27rem
+            padding: .5rem 0 0 .5rem
 
         // Links to online profiles
         nav
-            +flex-row-nowrap
-            +flex-center
+            display: inline-flex
             +flex-end
-            min-height: 5%
             width: 100%
+            margin-bottom: .5rem
 
             a
                 +hover-grow
@@ -257,31 +256,31 @@ h2
 
         .left
             .infobox
-                min-height: 95%
                 img
-                    padding-top: 1rem
+                    @include size(8rem, 8rem)
                 h1
-                    font-size: 1.5rem
-                    padding: 0 3.25rem
-                    text-align: start
+                    line-height: 1.5rem
+                    font-size: 1.25rem
+                    
             .wrapper
-                padding: 0 1rem 0 1.5rem
+                padding: 0 1rem 0 1rem
             nav
-                min-height: 5%
                 a:last-child
                         padding-right: 1rem
         
         .right
             section
-                padding: 0 .5rem 1rem .5rem
+                padding: 0 1rem 1rem 1rem
                 +flex-row-nowrap
 
                 ul,
                 p
+                    font-size: $xsmall
                     flex-basis: 80%
                     text-align: start
 
                 h2
+                    font-size: $small
                     flex-basis: 20%
                     text-align: end
                     padding-right: .75rem
@@ -292,24 +291,35 @@ h2
                 font-size: .75rem
 
 // Tablet and bigger styling
-@media only screen and (min-width: 1024px) and (max-width: 1440px)
+@media only screen and (min-width: 768px) and (max-width: 1024px)
     .container
+        .left
+            .infobox
+                h1
+                    font-size: 1.5rem
+                    line-height: 1.75rem
+                .wrapper
+                    width: 
         .right
             section
                 display: flex
-                padding: 0 2rem 1rem 2rem
+                padding: 0 1rem 1rem 1rem
 
                 h2
-                    flex-basis: 15%
+                    font-size: $small
+                    flex-basis: 20%
                     text-align: end
-                    padding-top: .25rem
                     padding-right: 1rem
 
                 p,
                 ul
-                    flex-basis: 85%
+                    font-size: $small
+                    flex-basis: 80%
                     text-align: start
 
                 ul> li> i
                         padding-bottom: .25rem
                         padding-right: .5rem
+            .misc
+                padding: 0 .5rem .5rem .5rem
+                align-items: center
