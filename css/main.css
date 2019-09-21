@@ -298,7 +298,7 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: auto;
-  padding: 0 2rem .5rem 2rem;
+  padding: 0 2rem 1rem 2rem;
   font-size: 1rem;
 }
 
@@ -318,6 +318,10 @@ h2 {
 .container .right .misc .misc-left:hover, .container .right .misc .misc-left:focus, .container .right .misc .misc-left:active {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
+}
+
+.container .right .misc .misc-left, .container .right .misc .misc-right {
+  padding: 0 .5rem 0 .5rem;
 }
 
 .left-light {

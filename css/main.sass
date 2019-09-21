@@ -180,11 +180,14 @@ h2
             +flex-row-nowrap
             justify-content: space-between
             margin-top: auto
-            padding: 0 2rem .5rem 2rem
+            padding: 0 2rem 1rem 2rem
             font-size: 1rem
 
             .misc-left
                 +hover-grow
+
+            .misc-left, .misc-right
+                padding: 0 .5rem 0 .5rem
 
 // Night mode CSS classes
 .left-light
@@ -302,8 +305,8 @@ h2
         .left
             .infobox
                 h1
-                    font-size: 1.5rem
-                    line-height: 1.5rem
+                    font-size: $small
+                    line-height: $small
         .right
             section
                 display: flex
