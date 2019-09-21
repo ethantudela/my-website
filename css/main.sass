@@ -116,7 +116,8 @@ h2
                 padding-bottom: 1rem
 
             h1
-                line-height: 2.5rem
+                line-height: 2rem
+                font-size: 1.75rem
                 font-weight: $bold
 
             a
@@ -198,10 +199,13 @@ h2
 
 .right-light
     background-color: $background-color
+    section
+        background-color: $background-color
+
     section > h2,
     .fa-check-circle,
         color: $secondary-color
-    
+
     .misc > a
         color: $text-color
         
@@ -229,10 +233,12 @@ h2
     
     section
         color: $nightmode-text
-    
+        background-color: $nightmode-background
+
     section > h2,
     .fa-check-circle,
         color: $nightmode-secondary
+        
 
     .misc > a
         color: $nightmode-text
@@ -244,7 +250,7 @@ h2
             color: $nightmode-primary
 
 // Mobile breakpoint style
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 800px)
     .container
         +reset
         +flex-column-nowrap
@@ -261,7 +267,7 @@ h2
                 h1
                     line-height: 1.5rem
                     font-size: 1.25rem
-                    
+
             .wrapper
                 padding: 0 1rem 0 1rem
             nav
@@ -280,40 +286,38 @@ h2
                     text-align: start
 
                 h2
-                    font-size: $small
+                    font-size: $xsmall
                     flex-basis: 20%
                     text-align: end
-                    padding-right: .75rem
-            ul> li> i
-                padding-bottom: .25rem
+            
+            .experience > h2
                 padding-right: .5rem
+
             .misc
                 font-size: .75rem
 
 // Tablet and bigger styling
-@media only screen and (min-width: 768px) and (max-width: 1024px)
+@media only screen and (min-height: 800px) and (min-width: 1200px)
     .container
         .left
             .infobox
                 h1
                     font-size: 1.5rem
-                    line-height: 1.75rem
-                .wrapper
-                    width: 
+                    line-height: 1.5rem
         .right
             section
                 display: flex
                 padding: 0 1rem 1rem 1rem
 
                 h2
-                    font-size: $small
+                    font-size: $xsmall
                     flex-basis: 20%
                     text-align: end
                     padding-right: 1rem
 
                 p,
                 ul
-                    font-size: $small
+                    font-size: $xsmall
                     flex-basis: 80%
                     text-align: start
 

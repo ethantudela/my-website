@@ -172,7 +172,8 @@ h2 {
 }
 
 .container .left .infobox h1 {
-  line-height: 2.5rem;
+  line-height: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
 }
 
@@ -348,6 +349,10 @@ h2 {
   background-color: #f8f8f8;
 }
 
+.right-light section {
+  background-color: #f8f8f8;
+}
+
 .right-light section > h2,
 .right-light .fa-check-circle {
   color: #B50C0F;
@@ -406,6 +411,7 @@ h2 {
 
 .right-night section {
   color: #ffffff;
+  background-color: #15202B;
 }
 
 .right-night section > h2,
@@ -426,7 +432,7 @@ h2 {
   color: #0095ff;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .container {
     margin: 0;
     padding: 0;
@@ -476,14 +482,12 @@ h2 {
     text-align: start;
   }
   .container .right section h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     text-align: end;
-    padding-right: .75rem;
   }
-  .container .right ul > li > i {
-    padding-bottom: .25rem;
+  .container .right .experience > h2 {
     padding-right: .5rem;
   }
   .container .right .misc {
@@ -491,10 +495,10 @@ h2 {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-height: 800px) and (min-width: 1200px) {
   .container .left .infobox h1 {
     font-size: 1.5rem;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
   }
   .container .right section {
     display: -webkit-box;
@@ -503,7 +507,7 @@ h2 {
     padding: 0 1rem 1rem 1rem;
   }
   .container .right section h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
     -ms-flex-preferred-size: 20%;
         flex-basis: 20%;
     text-align: end;
@@ -511,7 +515,7 @@ h2 {
   }
   .container .right section p,
   .container .right section ul {
-    font-size: 1.5rem;
+    font-size: 1rem;
     -ms-flex-preferred-size: 80%;
         flex-basis: 80%;
     text-align: start;
