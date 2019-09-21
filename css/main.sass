@@ -116,8 +116,8 @@ h2
                 padding-bottom: 1rem
 
             h1
-                line-height: 2rem
-                font-size: 2rem
+                line-height: $medium
+                font-size: $medium
                 font-weight: $bold
 
             a
@@ -268,7 +268,7 @@ h2
                 img
                     @include size(8rem, 8rem)
                 h1
-                    line-height: 1.5rem
+                    line-height: $small
                     font-size: 1.25rem
 
             .wrapper
@@ -300,7 +300,7 @@ h2
                 font-size: .75rem
 
 // Tablet and bigger styling
-@media only screen and (min-height: 800px) and (min-width: 1200px)
+@media only screen and (min-width: 800px) and (max-width: 1200px)
     .container
         .left
             .infobox
