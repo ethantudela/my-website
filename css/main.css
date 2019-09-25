@@ -27,6 +27,8 @@ body {
   height: 100%;
   width: 100%;
   font-family: "San Francisco", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul {
