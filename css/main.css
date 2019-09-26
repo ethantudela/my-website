@@ -226,6 +226,11 @@ h2 {
           transform: scale(1.15);
 }
 
+.container .left nav a:first-child {
+  font-size: 1.8rem;
+  padding-bottom: .25rem;
+}
+
 .container .left nav a:last-child {
   padding-right: 2rem;
 }
