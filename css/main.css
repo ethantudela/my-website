@@ -266,7 +266,8 @@ h2 {
 }
 
 .container .right section p,
-.container .right section ul {
+.container .right section ul,
+.container .right section form {
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
   text-align: start;
@@ -295,6 +296,40 @@ h2 {
           flex-flow: column nowrap;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
+}
+
+.container .right .contact-form {
+  padding-top: .5rem;
+}
+
+.container .right .contact-form p {
+  padding-bottom: .5rem;
+}
+
+.container .right .contact-form input,
+.container .right .contact-form button,
+.container .right .contact-form label > textarea {
+  color: inherit;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 1rem;
+  border: solid inherit 1px;
+}
+
+.container .right .contact-form input {
+  width: 50%;
+  padding: .25rem;
+}
+
+.container .right .contact-form button {
+  border-radius: 5%;
+  padding: .25rem .5rem;
+}
+
+.container .right .contact-form textarea {
+  width: 95%;
+  padding: .25rem;
+  resize: none;
 }
 
 .container .right .misc {
@@ -373,6 +408,13 @@ h2 {
   color: #B50C0F;
 }
 
+.right-light .contact-form input,
+.right-light .contact-form textarea,
+.right-light .contact-form button {
+  border: 1.5px #140101 solid;
+  border-radius: .25rem;
+}
+
 .right-light .misc > a {
   color: #140101;
 }
@@ -434,6 +476,12 @@ h2 {
   color: #0C52E8;
 }
 
+.right-night .contact-form input,
+.right-night .contact-form textarea,
+.right-night .contact-form button {
+  border: 1.5px #ffffff solid;
+}
+
 .right-night .misc > a {
   color: #ffffff;
 }
@@ -489,14 +537,14 @@ h2 {
   .container .right section ul,
   .container .right section p {
     font-size: 1rem;
-    -ms-flex-preferred-size: 70%;
-        flex-basis: 70%;
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
     text-align: start;
   }
   .container .right section h2 {
     font-size: 1rem;
-    -ms-flex-preferred-size: 30%;
-        flex-basis: 30%;
+    -ms-flex-preferred-size: 25%;
+        flex-basis: 25%;
     text-align: end;
     padding-right: .5rem;
   }

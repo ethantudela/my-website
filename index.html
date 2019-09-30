@@ -95,7 +95,7 @@
                 <h2>Tech overview</h2>
                 <ul>
                     <li><i class="far fa-check-circle"></i>HTML</li>
-                    <li><i class="far fa-check-circle"></i>CSS/SASS</li>
+                    <li><i class="far fa-check-circle"></i>CSS/SCSS</li>
                     <li><i class="far fa-check-circle"></i>JavaScript</li>
                 </ul>
             </section>
@@ -113,6 +113,23 @@
                         <p><b>Nov. 2018 - Present</b>: Freelance web development</p>
                     </div>
                 </div>
+            </section>
+            <section class="contact-form">
+                <h2>Contact Me</h2>
+                <form name="contact" method="POST" data-netlify="true">
+                    <p>
+                      <label><input placeholder="Your full name here." type="text" name="name" /></label>   
+                    </p>
+                    <p>
+                      <label><input placeholder="Your e-mail here." type="email" name="email" /></label>
+                    </p>
+                    <p>
+                      <label><textarea class="usermessage" placeholder="Your message here." name="message"></textarea></label>
+                    </p>
+                    <p>
+                      <button type="submit" class="sendbutton" onclick="sendMessage()">Send me a message.</button>
+                    </p>
+                  </form>
             </section>
             <section class="misc">
                 <a class="misc-left" href="https://en.wikipedia.org/wiki/Saipan">From the islands 🌴</a>
