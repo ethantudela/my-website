@@ -299,7 +299,11 @@ h2 {
 }
 
 .container .right .contact-form {
-  padding-top: .5rem;
+  padding-top: .25rem;
+}
+
+.container .right .contact-form h2 {
+  padding-top: .25rem;
 }
 
 .container .right .contact-form p {
