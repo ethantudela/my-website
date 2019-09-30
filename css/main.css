@@ -313,7 +313,6 @@ h2 {
   background-color: inherit;
   font-family: inherit;
   font-size: 1rem;
-  border: solid inherit 1px;
 }
 
 .container .right .contact-form input {
@@ -411,7 +410,7 @@ h2 {
 .right-light .contact-form input,
 .right-light .contact-form textarea,
 .right-light .contact-form button {
-  border: 1.5px #140101 solid;
+  border: 1px #140101 solid;
   border-radius: .25rem;
 }
 
@@ -479,7 +478,7 @@ h2 {
 .right-night .contact-form input,
 .right-night .contact-form textarea,
 .right-night .contact-form button {
-  border: 1.5px #ffffff solid;
+  border: 1px #ffffff solid;
 }
 
 .right-night .misc > a {
