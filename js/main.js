@@ -83,7 +83,3 @@ function nightMode() {
       right.classList.replace("right-night","right-light");
     }
 }
-// Changes button to say "Message Sent. Thank you!" on clicking.
-function sendMessage() {
-    document.querySelector(".sendbutton").innerHTML("Message sent. Thank you!")
-}
