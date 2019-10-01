@@ -116,7 +116,7 @@
             </section>
             <section class="contact-form">
                 <h2>Contact Me</h2>
-                <form name="contact" method="POST" data-netlify="true">
+                <form id="myform" name="contact" method="POST" data-netlify="true">
                     <p>
                       <label><input required placeholder="Your full name here." type="text" name="name" /></label>   
                     </p>
@@ -127,7 +127,7 @@
                       <label><textarea required class="usermessage" placeholder="Your message here." name="message"></textarea></label>
                     </p>
                     <p>
-                      <button type="submit" class="sendbutton">Send me a message.</button>
+                      <button onclick="submitForm()"type="submit" class="sendbutton">Send me a message.</button>
                     </p>
                   </form>
             </section>

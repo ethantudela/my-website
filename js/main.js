@@ -83,3 +83,8 @@ function nightMode() {
       right.classList.replace("right-night","right-light");
     }
 }
+
+function submitForm() {
+    document.querySelector("#myform").submit();
+    document.querySelector(".sendbutton").innerHTML("Message sent. Thank you!")
+  }
