@@ -266,8 +266,7 @@ h2 {
 }
 
 .container .right section p,
-.container .right section ul,
-.container .right section form {
+.container .right section ul {
   -ms-flex-preferred-size: 75%;
       flex-basis: 75%;
   text-align: start;
@@ -296,43 +295,6 @@ h2 {
           flex-flow: column nowrap;
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
-}
-
-.container .right .contact-form {
-  padding-top: .25rem;
-}
-
-.container .right .contact-form h2 {
-  padding-top: .25rem;
-}
-
-.container .right .contact-form p {
-  padding-bottom: .5rem;
-}
-
-.container .right .contact-form input,
-.container .right .contact-form button,
-.container .right .contact-form label > textarea {
-  color: inherit;
-  background-color: inherit;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.container .right .contact-form input {
-  width: 50%;
-  padding: .25rem;
-}
-
-.container .right .contact-form button {
-  border-radius: 5%;
-  padding: .25rem .5rem;
-}
-
-.container .right .contact-form textarea {
-  width: 95%;
-  padding: .25rem;
-  resize: none;
 }
 
 .container .right .misc {
