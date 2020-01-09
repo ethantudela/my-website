@@ -55,57 +55,6 @@ h2
         height: 100%
         overflow: hidden
         
-        // Container for night mode button
-        .button-container
-            width: 2rem
-            margin: .5rem 0 0 .5rem
-            transform: rotate(180deg)
-
-            // Night mode button styling
-            .nightmode
-            position: relative
-            width: 4rem
-            user-select: none
-
-            .nightmode-checkbox
-                display: none
-
-            .nightmode-label
-                display: block
-                overflow: hidden
-                cursor: pointer
-                height: 2rem
-                padding: 0
-                line-height: 2rem
-                border: .125rem solid #ffffff
-                border-radius: 2rem
-                background-color: inherit
-                transition: background-color 0.3s ease-in
-            
-            .nightmode-label:before
-                content: ""
-                display: block
-                width: 2rem
-                margin: 0
-                background: #FFFFFF
-                position: absolute
-                top: 0
-                bottom: 0
-                left: 2rem
-                border: .125rem solid #E3E3E3 
-                border-radius: 2rem
-                transition: all 0.3s ease-in 0s 
-            
-            .nightmode-checkbox:checked + .nightmode-label
-                background-color: $nightmode-primary
-            
-            .nightmode-checkbox:checked + .nightmode-label,
-            .nightmode-checkbox:checked + .nightmode-label:before
-                border-color: $background-color
-            
-            .nightmode-checkbox:checked + .nightmode-label:before
-                left: 0
-                
         // Information box styling
         .infobox
             +flex-column-nowrap
