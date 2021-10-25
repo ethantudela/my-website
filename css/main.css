@@ -87,6 +87,7 @@ h2 {
           flex-flow: column nowrap;
   height: 100%;
   overflow: hidden;
+  background-color: #ff383B;
 }
 
 .container .left .infobox {
@@ -122,10 +123,25 @@ h2 {
 }
 
 .container .left .infobox a {
-  font-weight: 700;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition: ease-in-out .5s;
+  transition: ease-in-out .5s;
+  color: #140101;
+  background-color: #f8f8f8;
+  background-color-font-weight: 700;
   margin-top: .5rem;
   padding: .5rem 3rem;
   border-radius: .25rem;
+}
+
+.container .left .infobox a:hover, .container .left .infobox a:focus, .container .left .infobox a:active {
+  -webkit-animation: back-pulse-light 2s linear infinite;
+          animation: back-pulse-light 2s linear infinite;
 }
 
 .container .left .wrapper {
@@ -157,6 +173,7 @@ h2 {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
+  color: #140101;
   font-size: 2rem;
   padding-right: 1rem;
 }
@@ -179,6 +196,11 @@ h2 {
   padding-right: 2rem;
 }
 
+.container section > h2,
+.container .fa-check-circle {
+  color: #B50C0F;
+}
+
 .container .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,6 +211,7 @@ h2 {
           flex-flow: column nowrap;
   height: 100%;
   width: 100%;
+  background-color: #f8f8f8;
 }
 
 .container .right section {
@@ -196,6 +219,7 @@ h2 {
   display: -ms-flexbox;
   display: flex;
   padding: 0 2rem 1rem 2rem;
+  background-color: #f8f8f8;
 }
 
 .container .right section h2 {
@@ -264,6 +288,7 @@ h2 {
   transition: -webkit-transform .5s;
   transition: transform .5s;
   transition: transform .5s, -webkit-transform .5s;
+  color: #140101;
 }
 
 .container .right .misc .misc-left:hover, .container .right .misc .misc-left:focus, .container .right .misc .misc-left:active {
@@ -331,6 +356,22 @@ h2 {
   .container .right .misc {
     font-size: .75rem;
     padding: 1rem 0 1rem .25rem;
+  }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    border: 1px #140101 solid;
+    border-radius: .25rem;
+  }
+  .misc > a {
+    color: #140101;
+  }
+  .misc > a > span {
+    -webkit-transition: color .5s;
+    transition: color .5s;
+  }
+  .misc > a:hover > span {
+    color: #ff383B;
   }
 }
 

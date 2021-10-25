@@ -54,14 +54,13 @@ h2
         +flex-column-nowrap
         height: 100%
         overflow: hidden
-        
+        background-color: $primary-color
         // Information box styling
         .infobox
             +flex-column-nowrap
             +flex-center
             width: 100%
             flex-grow: 1
-
             img
                 @include size(10rem,10rem)
                 border-radius: 50%
@@ -72,7 +71,10 @@ h2
                 font-weight: $bold
 
             a
-                font-weight: $bold
+                +hover-back-pulse-light
+                color: $text-color
+                background-color: $background-color
+                    font-weight: $bold
                 margin-top: .5rem
                 padding: .5rem 3rem
                 border-radius: .25rem
@@ -89,6 +91,7 @@ h2
 
             a
                 +hover-grow
+                color: $text-color
                 font-size: $medium
                 padding-right: 1rem
                 &:first-child
@@ -100,14 +103,19 @@ h2
 
                 &:last-child
                     padding-right: 2rem
-
+    section > h2,
+    .fa-check-circle,
+        color: $secondary-color
     // Right half
     .right
         +flex-column-nowrap
         +fullsize
+        background-color: $background-color
+
         section
             display: flex
             padding: 0 2rem 1rem 2rem
+            background-color: $background-color
 
             h2
                 flex-basis: 25%
@@ -141,6 +149,7 @@ h2
 
             .misc-left
                 +hover-grow
+                color: $text-color
 
             .misc-left, .misc-right
                 padding: 0 .5rem 0 .5rem
@@ -192,6 +201,21 @@ h2
                 font-size: .75rem
                 padding: 1rem 0 1rem .25rem
 
+    .contact-form
+        input,
+        textarea,
+        button
+            border: 1px $text-color solid
+            border-radius: .25rem
+
+    .misc > a
+        color: $text-color
+
+    .misc > a > span
+        transition: color .5s
+
+    .misc > a:hover > span
+            color: $primary-color
 // Tablet and bigger styling
 @media only screen and (min-width: 1025px)
     .container
