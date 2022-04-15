@@ -1,24 +1,12 @@
 @import url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 @-webkit-keyframes back-pulse-light {
   50% {
-    background-color: #f67d7f;
+    background-color: #fbc5c6;
   }
 }
 @keyframes back-pulse-light {
   50% {
-    background-color: #f67d7f;
-  }
-}
-
-@-webkit-keyframes back-pulse-night {
-  50% {
-    background-color: #6392f7;
-  }
-}
-
-@keyframes back-pulse-night {
-  50% {
-    background-color: #6392f7;
+    background-color: #fbc5c6;
   }
 }
 
@@ -367,8 +355,8 @@ h2 {
     color: #140101;
   }
   .misc > a > span {
-    -webkit-transition: color .5s;
-    transition: color .5s;
+    -webkit-transition: color .25s;
+    transition: color .25s;
   }
   .misc > a:hover > span {
     color: #ff383B;

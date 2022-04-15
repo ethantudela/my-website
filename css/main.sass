@@ -145,7 +145,7 @@ h2
             justify-content: space-between
             margin-top: auto
             padding: 0 2rem 1rem 2rem
-            font-size: 1rem
+            font-size: $xsmall
 
             .misc-left
                 +hover-grow
@@ -174,8 +174,6 @@ h2
                     line-height: $small
                     font-size: 1.25rem
 
-            // .wrapper
-            //     padding: 0 1rem 0 1rem
             nav
                 a:last-child
                         padding-right: 1rem
@@ -212,10 +210,11 @@ h2
         color: $text-color
 
     .misc > a > span
-        transition: color .5s
+        transition: color .25s
 
     .misc > a:hover > span
             color: $primary-color
+            
 // Tablet and bigger styling
 @media only screen and (min-width: 1025px)
     .container
